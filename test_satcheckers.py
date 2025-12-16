@@ -1,8 +1,11 @@
 import os
 import json 
 import time
+<<<<<<< HEAD
 import argparse
 import sys
+=======
+>>>>>>> 8f2968964b95a427b8b9ed7004b707a5268bc923
 
 from selenium import webdriver
 
@@ -20,6 +23,7 @@ from selenium.webdriver.support.ui import Select
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
+<<<<<<< HEAD
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--is_headless", type=bool, default=False)
@@ -33,7 +37,14 @@ chrome_options.binary_location = r"C:\Program Files\BraveSoftware\Brave-Browser\
 chrome_options.add_argument("--disable-brave-shields")
 if is_headless:
     chrome_options.add_argument("--headless")  # Run in headless mode
+=======
+>>>>>>> 8f2968964b95a427b8b9ed7004b707a5268bc923
 
+# Set up Chrome options for Brave
+chrome_options = Options()
+chrome_options.binary_location = r"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe"  # Windows
+
+# chrome_options.add_argument("--headless")  # Run in headless mode
 import smtplib
 
 email = "netalevy2059@gmail.com"
@@ -129,17 +140,24 @@ class TestSatchecker():
             s.login('drbananas481@gmail.com', "ycid widg zbpe awmr")
 
             # message to be sent
+<<<<<<< HEAD
             subject = "SAT Test Center Availability Update"
             body = str(available_centers) + " Testing Centers Open"
             message = "Subject: {}\n\n{}".format(subject, body)
+=======
+            message = str(available_centers) + " Testing Centers Open"
+>>>>>>> 8f2968964b95a427b8b9ed7004b707a5268bc923
             s.sendmail(email, email, message)
 
             # terminating the session
             s.quit()
+<<<<<<< HEAD
             
             # Increment email counter
             self.email_count += 1
             print(f"Email sent ({self.email_count}/{MAX_EMAILS})")
+=======
+>>>>>>> 8f2968964b95a427b8b9ed7004b707a5268bc923
         time.sleep(3)
 
 
